@@ -50,7 +50,7 @@ $ cmake .. -DCMAKE_TENSORRT_PATH=/usr && make -j$(nproc) && make install
 D. Export simplified ONNX model from torch:
 ```sh
 $ cd /workspace/BEVFormer_tensorrt
-$ python tools/pth2onnx.py configs/bevformer/plugin/bevformer_tiny_trt_p2.py /mnt/models/bevformer_tiny_epoch_24.pth --opset=13 --cuda --flag=cp2_op13
+$ python tools/pth2onnx.py configs/bevformer/plugin/bevformer_tiny_trt_p2.py checkpoints/onnx/bevformer_tiny_epoch_24_cp2_op13.onnx --opset=13 --cuda --flag=cp2_op13
 $ cp checkpoints/onnx/bevformer_tiny_epoch_24_cp2_op13.onnx /mnt/models/
 ```
 
